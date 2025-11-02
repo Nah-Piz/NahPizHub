@@ -1,0 +1,378 @@
+.series-hero {
+    background: var(--series-image-url);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 120px 0 60px; 
+    position: relative;
+}
+
+.series-hero-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.series-poster-large {
+    width: 300px;
+    height: 450px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.series-details {
+    flex: 1;
+    padding-bottom: 20px;
+}
+
+.series-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.series-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    color: var(--light-gray);
+    flex-wrap: wrap;
+}
+
+.series-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.series-actions {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--gradient);
+    color: var(--light);
+    box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: var(--light);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--light);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.action-btn:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+.action-btn.active {
+    background: var(--primary);
+}
+
+/* Seasons Section */
+.seasons-section {
+    padding: 60px 0;
+}
+
+.ser-section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ser-section-title i {
+    color: var(--primary);
+}
+
+.seasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.season-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+}
+
+.season-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.season-poster {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.season-card:hover .season-poster {
+    transform: scale(1.05);
+}
+
+.season-info {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.season-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.season-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.season-year {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.season-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.season-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.season-description {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--light-gray);
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.season-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.season-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: var(--light);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: 1;
+    justify-content: center;
+}
+
+.season-btn:hover {
+    background: var(--primary);
+}
+
+.season-btn.primary {
+    background: var(--primary);
+}
+
+.season-btn.primary:hover {
+    background: var(--primary-dark);
+}
+
+/* Cast Section */
+.cast-section {
+    padding: 40px 0 60px;
+}
+
+.cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
+}
+
+.cast-member {
+    text-align: center;
+}
+
+.cast-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 15px;
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+.cast-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.cast-character {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .series-hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .series-poster-large {
+        width: 250px;
+        height: 375px;
+    }
+}
+
+@media (max-width: 768px) {
+    .series-title {
+        font-size: 36px;
+    }
+
+    .series-hero {
+        height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .series-actions {
+        flex-wrap: wrap;
+    }
+
+    .seasons-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .cast-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .series-title {
+        font-size: 28px;
+    }
+
+    .series-poster-large {
+        width: 200px;
+        height: 300px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+
+    .seasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:920px) {
+    .series-hero {
+        height: auto;
+        padding: 180px 0 40px;
+    }
+    .series-poster-large {
+        width: 80%;
+        height: 450px;
+        display: block;
+        margin: 0 auto;
+    }
+}
