@@ -9,7 +9,11 @@ function SeriesDetailPage() {
 
     useEffect(() => { 
         document.title = `${movie.name || "Series Details"} - NahPizHub`;
-    },[])
+    },[]);
+
+    const handleActionBtn = (id)=>{
+        alert(id)
+    };
 
     return (  
         <>
@@ -46,19 +50,31 @@ function SeriesDetailPage() {
                             <p class="overview">{ movie.tagline }</p>
 
                             <div class="series-actions">
-                                <button class="btn btn-primary">
+                                <button
+                                    onClick(()=>handleActionBtn(id))
+                                    class="btn btn-primary"
+                                >
                                     <i class="fas fa-play"></i>
-                                    Continue S5:E8
+                                    {movie.lastWatch ? "Continue" : "Start"} watching
                                 </button>
-                                <button class="btn btn-secondary">
+                                <button
+                                    onClick(()=>handleActionBtn(id))
+                                    class="btn btn-secondary"
+                                >
                                     <i class="fas fa-plus"></i>
                                     Add to List
                                 </button>
                                 <div class="action-buttons">
-                                    <button class="action-btn">
+                                    <button 
+                                        onClick(()=>handleActionBtn(id))
+                                        class="action-btn"
+                                    >
                                         <i class="far fa-thumbs-up"></i>
                                     </button>
-                                    <button class="action-btn">
+                                    <button 
+                                        onClick(()=>handleActionBtn(id))
+                                        class="action-btn"
+                                    >
                                         <i class="far fa-bookmark"></i>
                                     </button>
                                     <button class="action-btn">
